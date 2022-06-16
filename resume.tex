@@ -1,0 +1,92 @@
+\documentclass[10pt]{article}
+
+%% Load packages %%
+\usepackage{
+    fontspec,
+    titlesec,
+    titling,
+}
+\usepackage[svgnames]{xcolor}
+\usepackage[
+    colorlinks = true,
+    urlcolor = RoyalBlue,
+]{hyperref}
+\urlstyle{same}
+\usepackage[
+    a4paper,
+    footnotesep=0cm,
+    footskip=0cm,
+    headheight=0cm,
+    headsep=0cm,
+    margin=1cm,
+    marginpar=0cm,
+    tmargin=0.5cm,
+]{geometry}
+
+\pagenumbering{gobble}
+
+% Start: set fonts
+\setmainfont[
+    ItalicFont=Playfair Display Italic,
+    BoldFont=Playfair Display Bold,
+    BoldItalicFont=Playfair Display Bold Italic,
+]{Playfair Display Regular}
+\setmonofont[
+    ItalicFont=JetBrains Mono Italic,
+    BoldFont=JetBrains Mono Bold,
+    BoldItalicFont=JetBrains Mono Bold Italic,
+]{JetBrains Mono Regular}
+\setsansfont[
+    % falls back to main font
+    ItalicFont=Playfair Display Italic,
+    BoldFont=Manrope Bold,
+    BoldItalicFont=Playfair Display Italic,
+]{Manrope Regular}
+% End: set fonts
+
+% Start: formatting section headers
+\titleformat{\section}
+    {\bfseries\centering\rmfamily\titlerule}
+    {}
+    {0em}
+    {}[\titlerule]
+% End: formatting section headers
+
+% Start: formatting title
+\renewcommand{\maketitle}{
+    \rmfamily
+    {\huge \theauthor} ---
+    \sffamily
+    Software Engineer
+
+    \vspace{0.5ex}
+    \href{mailto:jspmarcello@live.com}{jspmarcello@live.com} $\bullet$
+    \href{https://wa.me/6289651512403}{(62)896-5151-2403} $\bullet$
+    \href{https://www.linkedin.com/in/josepmk1}{https://www.linkedin.com/in/josepmk1} $\bullet$
+    \href{https://www.jspmarc.dev}{https://www.jspmarc.dev}
+    \vspace{-2ex}
+}
+% End: formatting title
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\title{R\'esum\'e}
+\author{Josep Marcello}
+
+\maketitle
+
+\section{Working Experience}
+
+\section{Skills}
+
+\section{Projects}
+
+\section{Education}
+
+\section{Organizational Experiences}
+
+\section{Achievements}
+
+\end{document}
