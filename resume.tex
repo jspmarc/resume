@@ -2,16 +2,11 @@
 
 %% Load packages %%
 \usepackage{
+    enumitem,
     fontspec,
-    titlesec,
+    tabularx,
     titling,
 }
-\usepackage[svgnames]{xcolor}
-\usepackage[
-    colorlinks = true,
-    urlcolor = RoyalBlue,
-]{hyperref}
-\urlstyle{same}
 \usepackage[
     a4paper,
     footnotesep=0cm,
@@ -21,7 +16,15 @@
     margin=1cm,
     marginpar=0cm,
     tmargin=0.5cm,
+    % showframe=true,
 ]{geometry}
+\usepackage[
+    colorlinks = true,
+    urlcolor = RoyalBlue,
+]{hyperref}
+\urlstyle{same}
+\usepackage[compact]{titlesec}
+\usepackage[svgnames]{xcolor}
 
 \pagenumbering{gobble}
 
@@ -46,10 +49,10 @@
 
 % Start: formatting section headers
 \titleformat{\section}
-    {\bfseries\centering\rmfamily\titlerule}
+    {\bfseries\centering\rmfamily\titlerule\vspace{0.2em}}
     {}
     {0em}
-    {}[\titlerule]
+    {\vspace{0.2em}}[\titlerule]
 % End: formatting section headers
 
 % Start: formatting title
@@ -59,16 +62,33 @@
     \sffamily
     Software Engineer
 
-    \vspace{0.5ex}
+    \vspace{0.1em}
     \href{mailto:jspmarcello@live.com}{jspmarcello@live.com} $\bullet$
     \href{https://wa.me/6289651512403}{(62)896-5151-2403} $\bullet$
     \href{https://www.linkedin.com/in/josepmk1}{https://www.linkedin.com/in/josepmk1} $\bullet$
     \href{https://www.jspmarc.dev}{https://www.jspmarc.dev}
-    \vspace{-2ex}
 }
 % End: formatting title
 
+% Change default font
 \renewcommand{\familydefault}{\sfdefault}
+
+% Start: new commands
+\newcommand{\workExpVspace}{0.2em}
+\newcommand{\workExp}[6]{
+    \noindent \textbf{#1}
+
+    \textbf{#2}, #3--#4
+
+    \textbf{#5}
+
+    {#6}
+    \vspace{\workExpVspace}
+}
+% End: new commands
+
+\setlist[itemize]{nosep}
+\renewcommand\labelitemi{$\bullet$}
 
 \begin{document}
 
@@ -78,12 +98,94 @@
 \maketitle
 
 \section{Working Experience}
+\workExp
+    {Tiket.com}
+    {Internship}
+    {June 2022}
+    {now}
+    {Backend Engineer}
+    {
+        \begin{itemize}
+            \item Tech stack: Java, Maven, Spring Boot, MongoDB
+        \end{itemize}
+    }
+
+\workExp
+    {Kenangan.com}
+    {Part time}
+    {December 2021}
+    {May 2022}
+    {Junior Backend Engineer}
+    {
+        \begin{itemize}
+            \item Tech stack: Node.js, Fastify.js, MySQL, Sequelize.js
+            \item Create APIs for Kenangan's app
+            \item Created a daemon to download videos from third-party content bucket to Kenangan's
+                S3 bucket
+            \item Redesigned and rewrote the database
+        \end{itemize}
+    }
+
+\workExp
+    {ITB's Infomatics Distributed System Laboratory}
+    {Full time}
+    {July 2021}
+    {now}
+    {Laboratory Assistant}
+    {
+        \begin{itemize}
+            \item work with 8 other assitants to create tasks and projects for 4 courses with
+                around 160 students each
+        \end{itemize}
+    }
+
+\workExp
+    {CoLearn}
+    {Internship}
+    {September 2020}
+    {February 2021}
+    {Data Analyst}
+    {
+        \begin{itemize}
+            \item Optimized machine learning algorithm by evaluating over 10,000 pictures from
+                machine learning prediction
+            \item Helped optimize my team's workflow by creating a Python script to automatically
+                download JSON data from an API and parse it into a CSV file
+        \end{itemize}
+    }
+
+\workExp
+    {Wardaya College}
+    {Internship}
+    {July 2020}
+    {August 2020}
+    {Software Engineer}
+    {
+        \begin{itemize}
+            \item Tech stack: Python Flask, MySQL
+            \item Developed a new e-learning platform with 3 other software engineers
+            \item Administrated a Moodle-based LMS with 3 other software engineers
+        \end{itemize}
+    }
 
 \section{Skills}
+
+\begin{tabularx}{\textwidth}{@{}X l}
+\textbf{Programming languages} & TypeScript, Go, Java, Python, C, Rust, Kotlin, JavaScript,\
+                                 C++, C\#, PHP \\
+\textbf{Frameworks}            & Express.js, React.js, Tailwindcss, Svelte.js, Vue.js, Spring\
+                                 Boot \\
+\textbf{Development tools}     & SQL Databases, Git, Docker, Redis, Linux, GitHub \&\
+                                 GitLab CI/CD, GNU Make \\
+\textbf{Languages}             & Indonesian (native), English (fluent)
+\end{tabularx}
+
+\vspace{-0.5em}
 
 \section{Projects}
 
 \section{Education}
+\textbf{Bandung Institute of Technology}
 
 \section{Organizational Experiences}
 
