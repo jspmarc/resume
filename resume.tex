@@ -18,11 +18,13 @@
     tmargin=0.5cm,
     % showframe=true,
 ]{geometry}
+\usepackage{multicol}
+\setlength{\multicolsep}{0pt plus 0pt minus 0pt} % set length
 \usepackage[
     colorlinks = true,
     urlcolor = RoyalBlue,
 ]{hyperref}
-\urlstyle{same}
+\urlstyle{same} % set url style
 \usepackage[compact]{titlesec}
 \usepackage[svgnames]{xcolor}
 
@@ -73,7 +75,7 @@
 % Change default font
 \renewcommand{\familydefault}{\sfdefault}
 
-% Start: new commands
+% Start: new work commands
 \newcommand{\workExpVspace}{0.2em}
 \newcommand{\workExp}[6]{
     \noindent \textbf{#1}
@@ -85,10 +87,20 @@
     {#6}
     \vspace{\workExpVspace}
 }
-% End: new commands
+% End: new work commands
 
+% Start: list settings
 \setlist[itemize]{nosep}
 \renewcommand\labelitemi{$\bullet$}
+% End: list settings
+
+% Start: new projects commands
+\newcommand{\project}[3]{
+    \noindent \href{#2}{#1}
+
+    {#3}
+}
+% End: new projects commands
 
 \begin{document}
 
@@ -184,11 +196,59 @@
 
 \section{Projects}
 
+\project
+    {Mile Zero Project 2.0 Website}
+    {https://milezeroproject.com}
+    {
+        A website to promote IEEE ITB Student Branch’s competition and for participants to sign up and
+        submit their work.
+
+        \textbf{Tech stack}: TypeScript, PostgreSQL, Prisma.js, Vue.js, Docker, Terraform.
+     }
+
+\project
+    {Dorayaki Store}
+    {https://gitlab.informatika.org/if3110-2021-02-16}
+    {
+        E-commerce app for a fictional company. Made up of 3 services.
+
+        \textbf{Tech stack}: Vanilla PHP 8, Java, React.js, Tailwindcss, Fastify.js, Prisma.js,
+        TypeScript, PostgreSQL, Redis, Docker.
+    }
+
+\project
+    {Nisbi.id}
+    {https://gitlab.com/alkademi/nisbi.id}
+    {
+        A Google Drive-like app created as one of Radya Labs’ projects.
+
+        \textbf{Back end tech stack}: Go, Fiber, Gorm, PostgreSQL.
+    }
+
 \section{Education}
-\textbf{Bandung Institute of Technology}
+
+\textbf{Bandung Institute of Technology}---Bandung, Indonesia
+
+\textbf{Bachelor of Computer} (Informatics Engineering)
+
+GPA: 3.56/4.00
+
+Finished Courses:
+\begin{multicols}{2}
+\begin{itemize}
+    \item Software Project
+    \item Parallel and Distributed System
+    \item Database Management
+    \item Machine Learning
+\end{itemize}
+\end{multicols}
 
 \section{Organizational Experiences}
 
+TODO
+
 \section{Achievements}
+
+TODO
 
 \end{document}
