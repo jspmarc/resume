@@ -83,17 +83,33 @@
     % #1 is company name
     % #2 is job type (internship, part time, full time, contract)
     % #3 is start month/year
-    % #4 is start month/year
+    % #4 is end month/year
     % #5 is role
     % #6 is description
     \noindent \begin{tabularx}{\textwidth}{@{}X c|r}
-        \textbf{\textsc{#5}} (#2) & #1 & #3---#4
+        \textbf{\textsc{#5}} (#2) & \textbf{#1} & #3---#4
     \end{tabularx}
 
     {#6}
     \vspace{\workExpVspace}
 }
 % End: new work commands
+
+% Start: organizational experiences commands
+\newcommand{\orgExp}[5]{
+    % #1 is role
+    % #2 is organization name
+    % #3 is start month/year
+    % #4 is end month/year
+    % #5 is description
+    \noindent \textbf{\textsc{#1}}---(#2)
+
+    {#3}--{#4}
+
+    {#5}
+    \vspace{\workExpVspace}
+}
+% End: organizational experiences commands
 
 % Start: list settings
 \setlist[itemize]{nosep}
@@ -122,10 +138,18 @@
     {Internship}
     {June 2022}
     {now}
-    {Backend Engineer}
+    {Back end Engineer}
     {
         \begin{itemize}
-            \item Tech stack: Java, Maven, Spring Boot, MongoDB
+            \item Tech stack: Java 8 (and RxJava), Java 11 (and Reactive Java), Maven, Spring,
+                MongoDB, Kibana, ElasticSearch
+            \item Work with 3 other senior software engineers, 1 tech lead, and 1 engineering
+                manager to improve and mantain Tiket.com's hotel post-purchase microservices (refund,
+                reschedule, etc.).
+            \item Worked with a software engineer, engineering manager, and devops to delete unused
+                data from ElasticSearch.
+            \item Created a documentation to document available APIs for one of post-purchase
+                microservice.
         \end{itemize}
     }
 
@@ -133,15 +157,18 @@
     {Kenangan.com}
     {Part time}
     {December 2021}
-    {May 2022}
-    {Junior Backend Engineer}
+    {June 2022}
+    {Junior Back end Engineer}
     {
         \begin{itemize}
             \item Tech stack: Node.js, Fastify.js, MySQL, Sequelize.js
-            \item Create APIs for Kenangan's app
+            \item Created APIs for Kenangan's app with another back-end engineer.
+            \item Worked with 2 mobile app engineers to create API contracts and adjust existing
+                APIs.
             \item Created a daemon to download videos from third-party content bucket to Kenangan's
-                S3 bucket
-            \item Redesigned and rewrote the database
+                S3 bucket.
+            \item Integrated a third party service to Kenangan's app.
+            \item Redesigned, documented, and rewrote the database.
         \end{itemize}
     }
 
@@ -153,7 +180,7 @@
     {Laboratory Assistant}
     {
         \begin{itemize}
-            \item work with 8 other assitants to create tasks and projects for 4 courses with
+            \item Work with 8 other assitants to create tasks and projects for 4 courses with
                 around 160 students each
         \end{itemize}
     }
@@ -205,19 +232,29 @@
     {Mile Zero Project 2.0 Website}
     {https://milezeroproject.com}
     {
-        A website to promote IEEE ITB Student Branch’s competition and for participants to sign up and
-        submit their work.
+        A website to promote IEEE ITB Student Branch’s competition and for participants to sign up
+        and submit their work.
 
-        \textbf{Tech stack}: TypeScript, PostgreSQL, Prisma.js, Vue.js, Docker, Terraform.
-     }
+        Tech stack: TypeScript, PostgreSQL, Prisma.js, Vue.js, Docker, Terraform.
+    }
 
 \project
     {Dorayaki Store}
     {https://gitlab.informatika.org/if3110-2021-02-16}
     {
-        E-commerce app for a fictional company. Made up of 3 services.
+        E-commerce app for a fictional company.
 
-        \textbf{Tech stack}: Vanilla PHP 8, Java, React.js, Tailwindcss, Fastify.js, Prisma.js,
+        Worked with 2 other software engineers to create 3 services:
+        \begin{multicols}{2}
+            \begin{itemize}
+                \item customer-side,
+                \item admin back-end,
+                \item admin front-end, and
+                \item a SOAP-based service (connector of customer and admin services)
+            \end{itemize}
+        \end{multicols}
+
+        Tech stack: Vanilla PHP 8, Java, React.js, Tailwindcss, Fastify.js, Prisma.js,
         TypeScript, PostgreSQL, Redis, Docker.
     }
 
@@ -227,8 +264,15 @@
     {
         A Google Drive-like app created as one of Radya Labs’ projects.
 
-        \textbf{Back end tech stack}: Go, Fiber, Gorm, PostgreSQL.
+        Worked with 1 other back-end engineer to create Nisbi.id's file-system-related features
+        (create file, delete file, etc.).
+
+        Tech stack: Go, Fiber, Gorm, PostgreSQL.
     }
+
+\project
+    {More projects}
+    {https://github.com/jspmarc}
 
 \section{Education}
 
@@ -236,24 +280,56 @@
 
 \textbf{Bachelor of Computer} (Informatics Engineering)
 
-GPA: 3.56/4.00
+GPA: 3.57/4.00
 
 Finished Courses:
 \begin{multicols}{2}
-\begin{itemize}
-    \item Software Project
-    \item Parallel and Distributed System
-    \item Database Management
-    \item Machine Learning
-\end{itemize}
+    \begin{itemize}
+        \item Parallel and Distributed System
+        \item Web-based Application Development
+        \item Software Project
+        \item Database Management
+    \end{itemize}
 \end{multicols}
 
 \section{Organizational Experiences}
 
-TODO
+\orgExp
+    {Head of Technology, Issue, and Exploration (TIE) Department}
+    {HMIF ITB}
+    {May 2022}
+    {now}
+    {
+        \begin{itemize}
+            \item Lead and managed 3 divisions under TIE Department
+            \item Worked with other divisions to provide internal HMIF services and software (Line
+                Bot, Discord Bot, and link shortener).
+        \end{itemize}
+    }
+    
+\orgExp
+{Head of Web Development Division}
+{Parade Wisuda Juli 2021 ITB}
+{May 2021}
+{July 2021}
+{
+    \begin{itemize}
+        \item Lead 12 software engineers to create the website's design, front-end, and back-end.
+        \item Setup CI/CD pipeline and deployment server.
+    \end{itemize}
+}
 
-\section{Achievements}
-
-TODO
+\orgExp
+    {CTF Divison Staff}
+    {Arkavidia 2021}
+    {September 2020}
+    {March 2021}
+    {
+        \begin{itemize}
+            \item Best staff of the CTF Division
+            \item Created cybersecurity-related problems (mostly in forensics and reverse
+                engineering field)
+        \end{itemize}
+    }
 
 \end{document}
