@@ -19,13 +19,13 @@
     % showframe=true,
 ]{geometry}
 \usepackage{multicol}
-\setlength{\multicolsep}{0pt plus 0pt minus 0pt} % set length
+\setlength{\multicolsep}{0pt plus 0pt minus 0pt} % set multicolsep length
 \usepackage[
     colorlinks = true,
     urlcolor = RoyalBlue,
 ]{hyperref}
 \urlstyle{same} % set url style
-\usepackage[compact]{titlesec}
+\usepackage{titlesec}
 \usepackage[svgnames]{xcolor}
 
 \pagenumbering{gobble}
@@ -78,7 +78,7 @@
 \renewcommand{\familydefault}{\sfdefault}
 
 % Start: new work commands
-\newcommand{\workExpVspace}{0.5em}
+\newcommand{\workExpVspace}{1em}
 \newcommand{\workExp}[6]{
     % #1 is company name
     % #2 is job type (internship, part time, full time, contract)
@@ -102,7 +102,7 @@
     % #3 is start month/year
     % #4 is end month/year
     % #5 is description
-    \noindent \textbf{\textsc{#1}}---(#2)
+    \noindent \textbf{\textsc{#1}}---#2
 
     {#3}--{#4}
 
@@ -143,9 +143,8 @@
         \begin{itemize}
             \item Tech stack: Java 8 (and RxJava), Java 11 (and Reactive Java), Maven, Spring,
                 MongoDB, Kibana, ElasticSearch
-            \item Work with 3 other senior software engineers, 1 tech lead, and 1 engineering
-                manager to improve and mantain Tiket.com's hotel post-purchase microservices (refund,
-                reschedule, etc.).
+            \item Work with 3 other senior software engineers, 1 tech lead to improve and mantain
+                Tiket.com's hotel post-purchase microservices.
             \item Worked with a software engineer, engineering manager, and devops to delete unused
                 data from ElasticSearch.
             \item Created a documentation to document available APIs for one of post-purchase
@@ -244,7 +243,7 @@
     {
         E-commerce app for a fictional company.
 
-        Worked with 2 other software engineers to create 3 services:
+        Worked with 2 other software engineers to create 4 services:
         \begin{multicols}{2}
             \begin{itemize}
                 \item customer-side,
@@ -274,6 +273,8 @@
     {More projects}
     {https://github.com/jspmarc}
 
+\pagebreak
+
 \section{Education}
 
 \textbf{Bandung Institute of Technology}---Bandung, Indonesia
@@ -282,13 +283,17 @@
 
 GPA: 3.57/4.00
 
-Finished Courses:
+Notable finished Courses:
 \begin{multicols}{2}
     \begin{itemize}
         \item Parallel and Distributed System
         \item Web-based Application Development
         \item Software Project
         \item Database Management
+        \item Computer Networks
+        \item Platform-based Application Development
+        \item Algorithm Strategies
+        \item Machine Learning
     \end{itemize}
 \end{multicols}
 
@@ -301,9 +306,11 @@ Finished Courses:
     {now}
     {
         \begin{itemize}
-            \item Lead and managed 3 divisions under TIE Department
+            \item Lead and managed 3 divisions under TIE Department.
             \item Worked with other divisions to provide internal HMIF services and software (Line
                 Bot, Discord Bot, and link shortener).
+
+                Tech used: Go, JavaScript/TypeScript, Svelte.js, Python, Docker, Nginx
         \end{itemize}
     }
     
@@ -316,28 +323,36 @@ Finished Courses:
     \begin{itemize}
         \item Lead 12 software engineers to create the website's design, front-end, and back-end.
         \item Setup CI/CD pipeline and deployment server.
+        \item Tech stack: TypeScript, Express.js, Sequelize.js, React.js, SCSS, MariaDB, GitHub
+            CI/CD, Docker
     \end{itemize}
 }
 
 \orgExp
-    {CTF Divison Staff}
+    {CTF Division Staff}
     {Arkavidia 2021}
     {September 2020}
     {March 2021}
     {
         \begin{itemize}
-            \item Best staff of the CTF Division
+            \item Best staff of the CTF Division.
             \item Created cybersecurity-related problems (mostly in forensics and reverse
-                engineering field)
+                engineering field).
         \end{itemize}
     }
 
 \section{Achievements}
 
 \begin{itemize}
-    \item Finalist at Bina Nusantara Cyber Security Community (Binus CSC) National Cyber Week, Cyber Arena CTF Competition
-    \item Finalist at UGM JOINTS 2021 CTF Competition
-    \item Participant at TechnoScape 2021 Hackathon Competition
+    \item Finalist at Bina Nusantara Cyber Security Community (Binus CSC)
+        National Cyber Week, Cyber Arena CTF Competition.
+    \item Finalist at UGM JOINTS 2021 CTF Competition.
+    \item Participant at TechnoScape 2021 Hackathon Competition.
+    \item
+        \href{https://courses.nvidia.com/certificates/f3c6d44eee1549af92d803daa2551b2f}{NVDIA
+        DLI Certificate} -- Getting Started with Deep Learning
+
+        Issued Dec 2021, credential ID: f3c6d44eee1549af92d803daa2551b2f
 \end{itemize}
 
 \end{document}
