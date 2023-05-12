@@ -267,45 +267,55 @@ a deep attention to detail to keep code clean and be as resource optimized as po
 \section{Projects}
 
 \project
-    {Mile Zero Project 2.0 Website}
-    {https://milezeroproject.com}
+    {Smart Room Conditioner}
+    {https://github.com/jspmarc/IF4051-Tubes}
     {
-        A website to promote IEEE ITB Student Branch’s competition and for participants to sign up
-        and submit their work.
+        An IoT app to autoamatically open/close dorm window/door based on room temperature,
+        humidity, and CO2 PPM.
 
-        Tech stack: TypeScript, PostgreSQL, Prisma.js, Vue.js, Docker, Terraform.
-    }
-
-\project
-    {Dorayaki Store}
-    {https://gitlab.informatika.org/if3110-2021-02-16}
-    {
-        E-commerce app for a fictional company.
-
-        Worked with 2 other software engineers to create 4 services:
+        Worked with 2 other software engineers to create a software that can:
         \begin{multicols}{2}
             \begin{itemize}
-                \item customer-side,
-                \item admin back-end,
-                \item admin front-end, and
-                \item a SOAP-based service (connector of customer and admin services)
+                \item IoT sensors emits data to MQTT every 1 second.
+                \item IoT data is captured by PySpark to calculate statistics (mean, min, and max)
+                    then the statistics is published to Kafka.
+                \item IoT data is also captured by Telegraf to be saved to InfluxDB.
+                \item Statistics published to Kafka is captured by FastAPI service and then given
+                    to ML model to determine whether to open door/window or not.
+                \item User can override ML prediction.
+                \item User can be alerted every 30 minutes using email if door/window state is not
+                    the same as ML prediction.
+                \item Both the statistics and the sensor data is shown in the user app.
             \end{itemize}
         \end{multicols}
 
-        Tech stack: Vanilla PHP 8, Java, React.js, Tailwindcss, Fastify.js, Prisma.js,
-        TypeScript, PostgreSQL, Redis, Docker.
+        Tech stack: Technologies used for this project are Python, PySpark,
+        FastAPI, aiokafka, Vue.js + Vite.js, Tailwind.css, Chart.js,
+        Platform.io (for IoT programming), InfluxDB, Telegraf, Redis, MQTT,
+        Kafka, Docker
     }
 
 \project
-    {Nisbi.id}
-    {https://gitlab.com/alkademi/nisbi.id}
+    {Simple Message Queue}
+    {https://github.com/jspmarc/simple-message-queue}
     {
-        A Google Drive-like app created as one of Radya Labs’ projects.
+        A specification and implementation of simple message queue.
 
-        Worked with 1 other back-end engineer to create Nisbi.id's file-system-related features
-        (create file, delete file, etc.).
+        In the implementation, multiple clients can connect to a queue server to push and pull
+        messages.
 
-        Tech stack: Go, Fiber, Gorm, PostgreSQL.
+        Tech stack: Rust
+    }
+
+\project
+    {Pendekin-V2}
+    {https://github.com/hmif-itb/pendekin-v2}
+    {
+        A link shortener for my student’s association (HMIF)
+
+        This is a rewriting from Pendekin V1 which uses Google to authenticate users.
+
+        Tech stack: Go, Go Fiber, MongoDB, Docker
     }
 
 \project
