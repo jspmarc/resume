@@ -36,11 +36,6 @@
     BoldFont=Playfair Display Bold,
     BoldItalicFont=Playfair Display Bold Italic,
 ]{Playfair Display Regular}
-\setmonofont[
-    ItalicFont=JetBrains Mono Italic,
-    BoldFont=JetBrains Mono Bold,
-    BoldItalicFont=JetBrains Mono Bold Italic,
-]{JetBrains Mono Regular}
 \setsansfont[
     % falls back to main font
     ItalicFont=Open Sans Italic,
@@ -131,6 +126,14 @@
 
 \maketitle
 
+\section{Introduction}
+
+I'm Josep Marcello, an avid software engineer from Indonesia. I have a keen interest in distributed
+and parallel systems which leads to me loving building scalable software and systems. Even though I
+my main interest is parallel and distributed systems, I have a large experience in web development,
+especially in back-end which is used by both web applications and mobile applications. I also have
+a deep attention to detail to keep code clean and be as resource optimized as possible.
+
 \section{Working Experience}
 
 \workExp
@@ -143,17 +146,22 @@
         \begin{itemize}
             \item Tech stack: Java 8 (and RxJava), Java 11 (and Reactive Java), Maven, Spring,
                 MongoDB, Kibana, ElasticSearch.
-            \item Work with 3 other software engineers, 1 tech lead to improve and mantain
-                Tiket.com's hotel demand post-purchase team services.
-            \item Initiate tracing for errors and communicate my findings and also possible
-                solutions with my lead and other engineers.
-            \item Reduce CPU usage on a service by refactoring and optimizing the use of Reactive
-                Java.
-            \item Provide API to enable data hard-deletion.
-            \item Create sequence diagrams to explain one of hotel demand post-purchase team's
-                feature.
-            \item Adjust current services to use new services from other team.
-            \item Improve logging on hotel demand post-purchase's services.
+            \item Work with 2 other software engineers, 1 tech lead to improve and mantain
+                all 5 of Tiket.com's accommodation demand post-purchase services.
+            \item Interim PIC of multi-currency feature for accommodation demand post-purchase
+                team.
+            \item Refactor booking API to better prevent double booking.
+            \item Help another team by making API contract and implementing the API for their new
+                feature using needs data from my team’s service.
+            \item Move an outbound API from using gRPC to HTTP.
+            \item Add monitoring for kafka delay and gRPC latency metric.
+            \item Implement a hard deletion API (using Kafka) to hard delete user data from one of
+                my team’s service.
+            \item Optimize CPU usage by refactoring reactive Java code.
+            \item Experiment on usage of Quarkus Java for better resource optimization and shared
+                my result with the accommodation team.
+            \item Work on other bug fixes and adjustments along with other software engineers,
+                QAs, and product manager.
         \end{itemize}
     }
 
@@ -169,16 +177,14 @@
                 MongoDB, Kibana, ElasticSearch.
             \item Worked with 3 other software engineers, 1 tech lead to improve and mantain
                 Tiket.com's hotel demand post-purchase team services.
-            \item Initiated tracing for errors and communicate my findings and also possible
-                solutions with my lead and other engineers.
-            \item Worked with other software engineers on implementing newer version of internal
-                microservices.
-            \item Worked with another software engineer, engineering manager, and devops to create
-                script to automate deleting unused data from ElasticSearch.
-            \item Worked with quality assurance (QA) engineers to test and fix new features or
-                improvements.
-            \item Created a documentation to document available APIs for one of post-purchase
-                microservice.
+            \item Created a Python script to automate deleting unused data from ElasticSearch and
+                collaborated with DevOps to deploy it.
+            \item Initiated error tracing (both on production and staging) and communicate my
+                findings to my lead and coworkers.
+            \item Adjusted booking code to allow usage of different order service for B2B and B2C
+                bookings.
+            \item Implemented a monitoring library for inbound and outbound API response time to
+                one of my team’s service.
         \end{itemize}
     }
 
@@ -191,13 +197,16 @@
     {
         \begin{itemize}
             \item Tech stack: Node.js, Fastify.js, MySQL, Sequelize.js
-            \item Created APIs for Kenangan's app with another back-end engineer.
-            \item Worked with 2 mobile app engineers to create API contracts and adjust existing
-                APIs.
-            \item Created a daemon to download videos from third-party content bucket to Kenangan's
-                S3 bucket.
-            \item Integrated a third party service to Kenangan's app.
-            \item Redesigned, documented, and rewrote the database.
+            \item Worked with 2 other back end engineers and 2 mobile app engineers to create API
+                contracts and adjust existing APIs.
+            \item Implemented the whole order flow (from user submitting their order until they
+                receive their order).
+            \item Created a service to download videos from other content bucket to Kenangan's
+                main S3 bucket.
+            \item Integrated a courier service API with Kenangan’s back end service to
+                automatically update user’s order status.
+            \item Redesigned, documented, and rewrote the database schema.
+            \item Refactored the back-end code to make it more readable for new joiners.
         \end{itemize}
     }
 
@@ -209,8 +218,8 @@
     {Laboratory Assistant}
     {
         \begin{itemize}
-            \item Work with 8 other assitants to create tasks and projects for 4 courses with
-                around 160 students each
+            \item Work with 8 other assitants to create tasks and projects for 4 courses revolving
+                around distributed system and low-level programming with around 160 students each.
         \end{itemize}
     }
 
@@ -223,9 +232,9 @@
     {
         \begin{itemize}
             \item Optimized machine learning algorithm by evaluating over 10,000 pictures from
-                machine learning prediction
+                machine learning prediction.
             \item Helped optimize my team's workflow by creating a Python script to automatically
-                download JSON data from an API and parse it into a CSV file
+                download JSON data from an API and parse it into a CSV file.
         \end{itemize}
     }
 
@@ -238,24 +247,22 @@
     {
         \begin{itemize}
             \item Tech stack: Python Flask, MySQL
-            \item Developed a new e-learning platform with 3 other software engineers
-            \item Administrated a Moodle-based LMS with 3 other software engineers
+            \item Developed a new e-learning platform with 3 other software engineers.
+            \item Implemented the login flow with password salting and hashing.
+            \item Designed the database schema for the back-end.
         \end{itemize}
     }
 
 \section{Skills}
 
 \begin{tabularx}{\textwidth}{@{}X l}
-\textbf{Programming languages} & TypeScript, Go, Java, Python, C, Rust, Kotlin, JavaScript,\
-                                 C++, C\#, PHP \\
+\textbf{Programming languages} & Rust, Java, Go, Python, C++, TypeScript, JavaScript, C, C\# \\
 \textbf{Frameworks}            & Express.js, React.js, Tailwindcss, Svelte.js, Vue.js, Spring\
-                                 Boot \\
-\textbf{Development tools}     & SQL Databases, Git, Docker, Redis, Linux, GitHub \&\
-                                 GitLab CI/CD, GNU Make \\
+                                 Boot, Actix-web \\
+\textbf{Development tools}     & SQL Databases, Git, Docker, Redis, InfluxDB, MongoDB, GitHub \&\
+                                 GitLab CI/CD \\
 \textbf{Languages}             & Indonesian (native), English (fluent)
 \end{tabularx}
-
-\pagebreak
 
 \section{Projects}
 
@@ -311,21 +318,21 @@
 
 \textbf{Bachelor of Computer} (Informatics Engineering)
 
-GPA: 3.57/4.00
+\textbf{GPA}: 3.56/4.00
 
-Notable finished Courses:
+\textbf{Notable finished Courses}:
 \begin{multicols}{2}
     \begin{itemize}
-        \item Parallel and Distributed System
         \item Web-based Application Development
         \item Software Project
+        \item Parallel and Distributed System
         \item Database Management
         \item Computer Networks
-        \item Platform-based Application Development
-        \item Algorithm Strategies
-        \item Machine Learning
+        \item Distributed Application Development
     \end{itemize}
 \end{multicols}
+
+\textbf{Final project}: Hardware-in-the-loops (HILS) Connector for Autonomous Vehicle Simulation
 
 \section{Organizational Experiences}
 
@@ -333,14 +340,15 @@ Notable finished Courses:
     {Head of Technology, Issue, and Exploration (TIE) Department}
     {HMIF ITB}
     {May 2022}
-    {now}
+    {May 2023}
     {
         \begin{itemize}
             \item Lead and managed 3 divisions under TIE Department.
             \item Worked with other divisions to provide internal HMIF services and software (Line
                 Bot, Discord Bot, and link shortener).
 
-                Tech used: Go, JavaScript/TypeScript, Svelte.js, Python, Docker, Nginx
+                Tech used: Go, JavaScript/TypeScript, Svelte.js, Python, Docker, Nginx, Google
+                Workspace Suite, GitHub project
         \end{itemize}
     }
     
