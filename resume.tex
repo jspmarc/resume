@@ -137,7 +137,7 @@ a deep attention to detail to keep code clean and be as resource-optimized as po
 \section{Working Experience}
 
 \workExp
-    {tiket.com}
+    {Tiket.com}
     {Full time}
     {October 2022}
     {now}
@@ -147,26 +147,17 @@ a deep attention to detail to keep code clean and be as resource-optimized as po
             \item Tech stack: Java 8 (and RxJava), Java 11 (and Reactive Java), Maven, Spring,
                 MongoDB, Kibana, ElasticSearch.
             \item Work with 2 other software engineers, 1 tech lead to improve and mantain
-                all 5 of tiket.com's accommodation demand post-purchase services.
+                all 5 of Tiket.com's accommodation demand post-purchase services.
             \item Interim PIC of multi-currency feature for accommodation demand post-purchase
                 team.
             \item Refactor booking API to better prevent double booking.
-            \item Help another team by making API contract and implementing the API for their new
-                feature using needs data from my team’s service.
-            \item Move an outbound API from using gRPC to HTTP.
-            \item Add monitoring for kafka delay and gRPC latency metric.
-            \item Implement a hard deletion API (using Kafka) to hard delete user data from one of
-                my team’s service.
-            \item Optimize CPU usage by refactoring reactive Java code.
-            \item Experiment on usage of Quarkus Java for better resource optimization and shared
-                my result with the accommodation team.
-            \item Work on other bug fixes and adjustments along with other software engineers,
+            \item Work on other features, bug fixes, and adjustments along with other software engineers,
                 QAs, and product manager.
         \end{itemize}
     }
 
 \workExp
-    {tiket.com}
+    {Tiket.com}
     {Internship}
     {June 2022}
     {October 2022}
@@ -176,15 +167,10 @@ a deep attention to detail to keep code clean and be as resource-optimized as po
             \item Tech stack: Java 8 (and RxJava), Java 11 (and Reactive Java), Maven, Spring,
                 MongoDB, Kibana, ElasticSearch.
             \item Worked with 3 other software engineers, 1 tech lead to improve and mantain
-                tiket.com's hotel demand post-purchase team services.
-            \item Created a Python script to automate deleting unused data from ElasticSearch and
-                collaborated with DevOps to deploy it.
+                Tiket.com's hotel demand post-purchase team services.
             \item Initiated error tracing (both on production and staging) and communicate my
                 findings to my lead and coworkers.
-            \item Adjusted booking code to allow usage of different order service for B2B and B2C
-                bookings.
-            \item Implemented a monitoring library for inbound and outbound API response time to
-                one of my team’s service.
+            \item Worked on API adjustments and bug fixes to improve Tiket.com product.
         \end{itemize}
     }
 
@@ -197,16 +183,10 @@ a deep attention to detail to keep code clean and be as resource-optimized as po
     {
         \begin{itemize}
             \item Tech stack: Node.js, Fastify.js, MySQL, Sequelize.js
-            \item Develoepd a new product consisteng of social media and e-commerce in 1
-                application with 2 other back end engineers and 2 mobile app engineers
-            \item Implemented the whole order flow (from user submitting their order until they
-                receive their order).
-            \item Created a service to download videos from other content bucket to Kenangan's
-                main S3 bucket.
-            \item Integrated a courier service API with Kenangan’s back end service to
-                automatically update user’s order status.
-            \item Redesigned, documented, and rewrote the database schema.
-            \item Refactored the back-end code to make it more readable for new joiners.
+            \item Worked with 2 other back end engineers and 2 mobile app engineers to create API
+                contracts and adjust existing APIs.
+            \item Developed a new product consisting of social media and e-commerce in 1
+                application that's very early in the development age.
         \end{itemize}
     }
 
@@ -248,8 +228,6 @@ a deep attention to detail to keep code clean and be as resource-optimized as po
         \begin{itemize}
             \item Tech stack: Python Flask, MySQL
             \item Developed a new e-learning platform with 3 other software engineers from scratch.
-            \item Implemented the login flow with password salting and hashing.
-            \item Designed the database schema for the back-end.
         \end{itemize}
     }
 
@@ -273,26 +251,10 @@ a deep attention to detail to keep code clean and be as resource-optimized as po
         An IoT app to autoamatically open/close dorm window/door based on room temperature,
         humidity, and CO2 PPM.
 
-        Worked with 2 other software engineers to create a software that can:
-        \begin{multicols}{2}
-            \begin{itemize}
-                \item IoT sensors emits data to MQTT every 1 second.
-                \item IoT data is captured by PySpark to calculate statistics (mean, min, and max)
-                    then the statistics is published to Kafka.
-                \item IoT data is also captured by Telegraf to be saved to InfluxDB.
-                \item Statistics published to Kafka is captured by FastAPI service and then given
-                    to ML model to determine whether to open door/window or not.
-                \item User can override ML prediction.
-                \item User can be alerted every 30 minutes using email if door/window state is not
-                    the same as ML prediction.
-                \item Both the statistics and the sensor data is shown in the user app.
-            \end{itemize}
-        \end{multicols}
+        Sensor emits a message every second which processed and saved, then predicted on using
+        machine learning.
 
-        Tech stack: Technologies used for this project are Python, PySpark,
-        FastAPI, aiokafka, Vue.js + Vite.js, Tailwind.css, Chart.js,
-        Platform.io (for IoT programming), InfluxDB, Telegraf, Redis, MQTT,
-        Kafka, Docker
+        Tech stack: Python, PySpark, Vue.js, Platform.io, InfluxDB, Telegraf, Redis, MQTT, Kafka
     }
 
 \project
